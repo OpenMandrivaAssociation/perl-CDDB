@@ -13,7 +13,6 @@ Source:		ftp://ftp.perl.org/pub/CPAN/modules/by-module/CDDB/%{module}-%{version}
 Url:		http://search.cpan.org/dist/%{module}
 BuildRequires:	perl-devel
 BuildArch:	noarch
-BuildRoot:	%{_tmppath}/%{name}-%{version}
 
 %description
 CDDB is a high-level interface to databases based on the Compact Disc
