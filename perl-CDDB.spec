@@ -1,19 +1,18 @@
-%define module	CDDB
-%define name	perl-%{module}
-%define version 1.17
-%define release	%mkrel 7
+%define upstream_name	 CDDB
+%define upstream_version 1.20
 
-Name: 		%{name}
-Version: 	%{version}
-Release:	%{release}
+Name: 		perl-%{upstream_name}
+Version: 	%perl_convert_version %{upstream_version}
+Release:	%mkrel 1
+
 Summary:	A high-level interface to cddb protocol servers
-License:	GPL or Artistic
+License:	GPL+ or Artistic
 Group:		Development/Perl
-Source:		ftp://ftp.perl.org/pub/CPAN/modules/by-module/CDDB/%{module}-%{version}.tar.bz2
-Url:		http://search.cpan.org/dist/%{module}
-BuildRequires:	perl-devel
+Url:		http://search.cpan.org/dist/%{upstream_name}
+Source0:	ftp://ftp.perl.org/pub/CPAN/modules/by-module/CDDB/%{upstream_name}-%{upstream_version}.tar.gz
+
 BuildArch:	noarch
-BuildRoot:	%{_tmppath}/%{name}-%{version}
+BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}
 
 %description
 CDDB is a high-level interface to databases based on the Compact Disc
@@ -27,7 +26,7 @@ access. Developers using CDDB.pm may continue to attempt connections to
 cddb.com servers, but there are no guarantees.
 
 %prep
-%setup -q -n %{module}-%{version}
+%setup -q -n %{upstream_name}-%{upstream_version}
 
 %build
 %{__perl} Makefile.PL INSTALLDIRS=vendor
