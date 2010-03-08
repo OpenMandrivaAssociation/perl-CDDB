@@ -1,5 +1,5 @@
 %define upstream_name	 CDDB
-%define upstream_version 1.21
+%define upstream_version 1.220
 
 Name: 		perl-%{upstream_name}
 Version: 	%perl_convert_version %{upstream_version}
