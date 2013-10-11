@@ -1,17 +1,19 @@
 %define upstream_name	 CDDB
-%define upstream_version 1.220
+%define upstream_version 1.222
 
 Name:		perl-%{upstream_name}
 Version:	%perl_convert_version %{upstream_version}
-Release:	3
+Release:	1
 
 Summary:	A high-level interface to cddb protocol servers
 License:	GPL+ or Artistic
 Group:		Development/Perl
 Url:		http://search.cpan.org/dist/%{upstream_name}
-Source0:	ftp://ftp.perl.org/pub/CPAN/modules/by-module/CDDB/%{upstream_name}-%{upstream_version}.tar.gz
+Source0:	ftp://ftp.perl.org:21/pub/CPAN/modules/by-module/CDDB/CDDB-%{upstream_version}.tar.gz
 
 BuildRequires:	perl-devel
+BuildRequires: perl(Mail::Header)
+BuildRequires:	perl(Mail::Header)
 BuildArch:	noarch
 
 %description
@@ -110,4 +112,5 @@ rm -f %{buildroot}%{perl_archlib}/perllocal.pod
 * Tue May 11 2004 Michael Scherer <misc@mandrake.org> 1.12-1mdk
 - New release 1.12
 - repmbuildupdate aware
+
 
