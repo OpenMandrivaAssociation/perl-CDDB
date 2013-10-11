@@ -12,8 +12,8 @@ Url:		http://search.cpan.org/dist/%{upstream_name}
 Source0:	ftp://ftp.perl.org:21/pub/CPAN/modules/by-module/CDDB/CDDB-%{upstream_version}.tar.gz
 
 BuildRequires:	perl-devel
-BuildRequires: perl(Mail::Header)
-BuildRequires:	perl(Mail::Header)
+BuildRequires:  perl(Mail::Header)
+BuildRequires:	perl(HTTP::Request)
 BuildArch:	noarch
 
 %description
