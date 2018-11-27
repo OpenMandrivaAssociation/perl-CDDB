@@ -35,9 +35,6 @@ cddb.com servers, but there are no guarantees.
 perl Makefile.PL INSTALLDIRS=vendor
 %make
 
-%check
-make test
-
 %install
 %makeinstall_std
 rm -f %{buildroot}%{perl_archlib}/perllocal.pod
